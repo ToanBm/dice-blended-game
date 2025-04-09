@@ -56,3 +56,9 @@ forge create src/FluentSdkRustTypesTest.sol:FluentSdkRustTypesTest \
 --verifier blockscout \
 --verifier-url https://blockscout.dev.gblend.xyz/api/
 ```
+
+Foundry test fork deployed contracts on Fluent testnet 
+
+```shell
+forge coverage --fork-url https://rpc.dev.gblend.xyz/
+```
