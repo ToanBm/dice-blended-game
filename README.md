@@ -34,6 +34,13 @@ gblend deploy \
 Copy this deployed Rust contract address, 
 since this will be used for the Solidity contract communication.
 
+Note: to update Rust crate `fluentbase-sdk` if there are issues:
+
+```shell
+cargo clean
+cargo update -p fluentbase-sdk
+```
+
 ### Step 2 - Deploy Solidity Contract
 
 Switch back to the root of this repo, then switch to the `solidity` contract folder
@@ -70,6 +77,12 @@ Switch back to the root of this repo, then switch to the `javascript` folder
 ```shell
 cd ../
 cd javascript
+```
+
+Install packages such as ethers.js with `package.json` with
+
+```shell
+npm i
 ```
 
 Run the ethers.js test script to have the Solidity contract call the Rust contract
