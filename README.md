@@ -34,7 +34,7 @@ gblend deploy \
 Copy this deployed Rust contract address, 
 since this will be used for the Solidity contract communication.
 
-Note: to update Rust crate `fluentbase-sdk` if there are issues:
+⚠️ Note: to update Rust crate `fluentbase-sdk` if there are issues: ⚠️
 
 ```shell
 cargo clean
