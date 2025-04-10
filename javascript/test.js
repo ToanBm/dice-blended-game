@@ -13,16 +13,6 @@ let fluent_sepolia_chain_id = 20993;
 
 getStoredValues()
 
-async function getFluentRust() {  
-  const fluentRust = await contractDeployed.fluentRust()
-  console.log("fluentRust: "+ fluentRust)
-}
-
-async function getRustUint256() {  
-  const rustUint256 = await contractDeployed.getRustUint256()
-  console.log("getRustUint256: "+ rustUint256)
-}
-
 async function getStoredValues() {
 
   const connectedNetworkObject = await provider.getNetwork();
@@ -35,7 +25,28 @@ async function getStoredValues() {
     return;
   }
 
-  await getFluentRust();
-  await getRustUint256();
+  const fluentRustContractAddress = await contractDeployed.fluentRust()
+  console.log("fluentRustContractAddress: "+ fluentRustContractAddress)
+
+  const rustString = await contractDeployed.getRustString()
+  console.log("rustString: "+ rustString)
+
+  const rustUint256 = await contractDeployed.getRustUint256()
+  console.log("rustUint256: "+ rustUint256)
+
+  const rustInt256 = await contractDeployed.getRustInt256()
+  console.log("rustInt256: "+ rustInt256)
+
+  const rustAddress = await contractDeployed.getRustAddress()
+  console.log("rustAddress: "+ rustAddress)
+
+  const rustBytes = await contractDeployed.getRustBytes()
+  console.log("rustBytes: "+ rustBytes)
+
+  const rustBytes32 = await contractDeployed.getRustBytes32()
+  console.log("rustBytes32: "+ rustBytes32)
+
+  const rustBool = await contractDeployed.getRustBool()
+  console.log("rustBool: "+ rustBool)
 
 }
