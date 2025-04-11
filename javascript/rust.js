@@ -4,7 +4,7 @@ const rpcURL = "https://rpc.dev.gblend.xyz/" // Your RPC URL goes here
 
 const provider = new ethers.providers.JsonRpcProvider(rpcURL)
 
-const contractAddress = '0x9030e7aa523b19D6A9d2327d45d3A3287b3EfAE1'
+const contractAddress = '0x04160C19738bB6429c0554fBdC11A96079D7297D'
 const contractABI = [{"inputs":[],"name":"rustAddress","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"rustBool","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"rustBytes","outputs":[{"internalType":"bytes","name":"","type":"bytes"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"rustBytes32","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"rustInt256","outputs":[{"internalType":"int256","name":"","type":"int256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"rustString","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"rustUint256","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
 
 const contractDeployed = new ethers.Contract(contractAddress, contractABI, provider);

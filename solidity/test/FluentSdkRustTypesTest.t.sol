@@ -8,7 +8,7 @@ contract FluentSdkRustTypesTestTest is Test {
 
     FluentSdkRustTypesTest public fluentSdkRustTypesTest;
 
-    address constant rustContractFluentTestnet = 0x9030e7aa523b19D6A9d2327d45d3A3287b3EfAE1;
+    address constant rustContractFluentTestnet = 0x04160C19738bB6429c0554fBdC11A96079D7297D;
 
     function setUp() public {
         fluentSdkRustTypesTest = new FluentSdkRustTypesTest(rustContractFluentTestnet);
