@@ -88,7 +88,13 @@ npm i
 Run the ethers.js test script to have the Solidity contract call the Rust contract
 
 ```shell
-node test.js
+node solidity.js
+```
+
+Run the ethers.js test script to call the Rust contract directly (using Solidity interface ABI)
+
+```shell
+node rust.js
 ```
 
 This ethers.js Javascript example can be 

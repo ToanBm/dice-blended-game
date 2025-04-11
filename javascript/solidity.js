@@ -11,13 +11,13 @@ const contractDeployed = new ethers.Contract(contractAddress, contractABI, provi
 
 let fluent_sepolia_chain_id = 20993;
 
-getStoredValues()
+testSolidityContractRead()
 
-async function getStoredValues() {
+async function testSolidityContractRead() {
 
   const connectedNetworkObject = await provider.getNetwork();
   const chainIdConnected = connectedNetworkObject.chainId;
-  console.log("chainIdConnected: "+ chainIdConnected)
+  console.log("chainIdConnected: " + chainIdConnected)
 
   if(chainIdConnected != fluent_sepolia_chain_id){
     console.log("RPC endpoint not connected to Fluent Sepolia (chainId: " + fluent_sepolia_chain_id + ").");
@@ -26,27 +26,27 @@ async function getStoredValues() {
   }
 
   const fluentRustContractAddress = await contractDeployed.fluentRust()
-  console.log("fluentRustContractAddress: "+ fluentRustContractAddress)
+  console.log("fluentRustContractAddress: " + fluentRustContractAddress)
 
   const rustString = await contractDeployed.getRustString()
-  console.log("rustString: "+ rustString)
+  console.log("rustString: " + rustString)
 
   const rustUint256 = await contractDeployed.getRustUint256()
-  console.log("rustUint256: "+ rustUint256)
+  console.log("rustUint256: " + rustUint256)
 
   const rustInt256 = await contractDeployed.getRustInt256()
-  console.log("rustInt256: "+ rustInt256)
+  console.log("rustInt256: " + rustInt256)
 
   const rustAddress = await contractDeployed.getRustAddress()
-  console.log("rustAddress: "+ rustAddress)
+  console.log("rustAddress: " + rustAddress)
 
   const rustBytes = await contractDeployed.getRustBytes()
-  console.log("rustBytes: "+ rustBytes)
+  console.log("rustBytes: " + rustBytes)
 
   const rustBytes32 = await contractDeployed.getRustBytes32()
-  console.log("rustBytes32: "+ rustBytes32)
+  console.log("rustBytes32: " + rustBytes32)
 
   const rustBool = await contractDeployed.getRustBool()
-  console.log("rustBool: "+ rustBool)
+  console.log("rustBool: " + rustBool)
 
 }
