@@ -1,6 +1,6 @@
 # blended-sdk
 
-Blended App template SDK for Solidity and Rust WASM contracts.
+Blended App template SDK for Solidity and Rust WASM contracts with Javascript ethers.js test scripts.
 
 ## Documentation
 
