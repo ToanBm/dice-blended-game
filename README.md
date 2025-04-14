@@ -1,6 +1,6 @@
-# blended-template
+# blended-sdk
 
-Blended App template for Solidity and Rust WASM contracts.
+Blended App template SDK for Solidity and Rust WASM contracts.
 
 ## Documentation
 
